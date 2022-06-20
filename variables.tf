@@ -48,24 +48,6 @@ variable "firewall_subnet_rules" {
   default     = []
 }
 
-variable "client_secret_permissions" {
-  description = "A list of Key Vault Secret permissions to assign to the current client."
-  type        = list(string)
-  default     = ["Get", "List", "Set", "Delete", "Recover", "Backup", "Restore"]
-}
-
-variable "client_certificate_permissions" {
-  description = "A list of Key Vault Certificate permissions to assign to the current client."
-  type        = list(string)
-  default     = []
-}
-
-variable "client_key_permissions" {
-  description = "A list of Key Vault Key permissions to assign to the current client."
-  type        = list(string)
-  default     = []
-}
-
 variable "log_analytics_workspace_id" {
   description = "The ID of the Log Analytics Workspace to send diagnostics to."
   type        = string

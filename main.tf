@@ -30,17 +30,6 @@ resource "azurerm_key_vault" "this" {
   }
 }
 
-resource "azurerm_key_vault_access_policy" "this" {
-  key_vault_id = azurerm_key_vault.this.id
-  tenant_id    = data.azurerm_client_config.current.tenant_id
-  object_id    = data.azurerm_client_config.current.object_id
-
-  secret_permissions      = var.client_secret_permissions
-  certificate_permissions = var.client_certificate_permissions
-  key_permissions         = var.client_key_permissions
-  storage_permissions     = []
-}
-
 resource "azurerm_monitor_diagnostic_setting" "this" {
   name                       = "${azurerm_key_vault.this.name}-logs"
   target_resource_id         = azurerm_key_vault.this.id

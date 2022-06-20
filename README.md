@@ -77,7 +77,6 @@ No modules.
 | Name | Type |
 |------|------|
 | [azurerm_key_vault.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault) | resource |
-| [azurerm_key_vault_access_policy.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault_access_policy) | resource |
 | [azurerm_monitor_diagnostic_setting.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/monitor_diagnostic_setting) | resource |
 | [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
 
@@ -86,9 +85,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_application"></a> [application](#input\_application) | The application to create the resources for. | `string` | n/a | yes |
-| <a name="input_client_certificate_permissions"></a> [client\_certificate\_permissions](#input\_client\_certificate\_permissions) | A list of Key Vault Certificate permissions to assign to the current client. | `list(string)` | `[]` | no |
-| <a name="input_client_key_permissions"></a> [client\_key\_permissions](#input\_client\_key\_permissions) | A list of Key Vault Key permissions to assign to the current client. | `list(string)` | `[]` | no |
-| <a name="input_client_secret_permissions"></a> [client\_secret\_permissions](#input\_client\_secret\_permissions) | A list of Key Vault Secret permissions to assign to the current client. | `list(string)` | <pre>[<br>  "Get",<br>  "List",<br>  "Set",<br>  "Delete",<br>  "Recover",<br>  "Backup",<br>  "Restore"<br>]</pre> | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | The environment to create the resources for. | `string` | n/a | yes |
 | <a name="input_firewall_ip_rules"></a> [firewall\_ip\_rules](#input\_firewall\_ip\_rules) | A list of IP addresses or CIDR blocks that should be able to access the Key Vault. | `list(string)` | `[]` | no |
 | <a name="input_firewall_subnet_rules"></a> [firewall\_subnet\_rules](#input\_firewall\_subnet\_rules) | A list of IDs of the subnets that should be able to access the Key Vault. | `list(string)` | `[]` | no |

@@ -34,17 +34,5 @@ module "vault" {
 
   firewall_ip_rules = var.firewall_ip_rules
 
-  client_secret_permissions = ["Get", "List", "Set", "Delete", "Recover", "Backup", "Restore", "Purge"]
-
   log_analytics_workspace_id = azurerm_log_analytics_workspace.this.id
-}
-
-resource "random_password" "this" {
-  length = 16
-}
-
-resource "azurerm_key_vault_secret" "this" {
-  name         = "password"
-  value        = random_password.this.result
-  key_vault_id = module.vault.key_vault_id
 }
